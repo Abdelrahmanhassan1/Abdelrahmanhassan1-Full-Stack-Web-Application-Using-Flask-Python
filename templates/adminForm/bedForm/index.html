@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link  rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/adminForm/bedForm/style.css') }}"  >
+</head>
+<body>
+
+    <div class="nav_bar">
+        <div class="logo">
+            <h3> ICU Rooms </h3>
+        </div>
+        <ul>
+            
+            <li><a href="#" > Home </a></li>
+            <li><a href="#" > Sign In </a> </li>
+            <li><a href="#" > Contact Us </a></li>
+            <li><a href="#" > Admin </a></li>
+
+        </ul>        
+
+    </div>
+
+    <!-- Bed -->
+
+    <div class="bedForm">
+        <form action="http://127.0.0.1:5000/admin/privilages/bedform" method="POST">
+ 
+            <label for="roomNum"> Room Number: </label><br> 
+            <input type="number" id="roomNum" name="roomNum"><br> <br> 
+
+            <label for="bedNum">Bed Number: </label><br> 
+            <input type="number" id="bedNum" name="bedNum"> <br> <br>
+        
+            <label for="status">Status: </label><br> 
+            <input type="text" placeholder="E.g Busy or Empty" id="status" name="status"> <br> <br>
+            
+            <input type="submit">
+
+        </form>
+    </div>
+
+    
+</body>
+</html>
