@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link  rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/adminForm/doctorForm/style.css') }}"  >
+</head>
+<body>
+
+    <div class="nav_bar">
+        <div class="logo">
+            <h3> ICU Rooms </h3>
+        </div>
+        <ul>
+            
+            <li><a href="#" > Home </a></li>
+            <li><a href="#" > Sign In </a> </li>
+            <li><a href="#" > Contact Us </a></li>
+            <li><a href="#" > Admin </a></li>
+
+        </ul>        
+
+    </div>
+
+    <!-- Doctor Form -->
+
+    <div class="doctorForm">
+
+        <form action="http://127.0.0.1:5000/admin/privilages/doctorform" method="POST">
+
+            <label for="name"> Name: </label><br>
+            <input type="text" placeholder="Name..." id="name" name="name"><br><br>
+
+            <label for="age"> Age: </label><br>
+            <input type="number" placeholder="Age..." id="age" name="age"><br><br>
+            
+            <label for="mlnumber"> Medical License Number: </label><br>
+            <input type="number" placeholder="e.g 1234567" id="mlnumber" name="mlnumber" ><br><br>
+            
+            <label for="id"> ID: </label><br>
+            <input type="number" placeholder="e.g 1234567" id="id" name="id" ><br><br>
+
+            <label for="email"> Email: </label><br>
+            <input type="email" placeholder="example@example.com..." id="email" name="email"><br><br>
+
+            <label for="password"> Password: </label><br>
+            <input type="password" placeholder="write a strong password..." id="password" name="password"><br><br>
+            
+            <input type="submit"><br>
+
+
+        </form>
+    </div>
+    
+
+    
+</body>
+</html>
