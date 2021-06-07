@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link  rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/adminView/doctorView/style.css') }}"  >
+</head>
+<body>
+
+    <div class="nav_bar">
+        <div class="logo">
+            <h3> ICU Rooms </h3>
+        </div>
+        <ul>
+            
+            <li><a href="#" > Home </a></li>
+            <li><a href="#" > Sign In </a> </li>
+            <li><a href="#" > Contact Us </a></li>
+            <li><a href="#" > Admin </a></li>
+
+        </ul>        
+
+    </div>
+
+    <!-- Doctor view -->
+
+    <div class="doctorviewForm">
+        <form>
+ 
+            <label>Medical License Number: </label><br> 
+            <input type="number" ><br> <br> 
+            
+            <input type="submit" value="Show">
+
+        </form>
+    </div>
+
+    
+</body>
+</html>
