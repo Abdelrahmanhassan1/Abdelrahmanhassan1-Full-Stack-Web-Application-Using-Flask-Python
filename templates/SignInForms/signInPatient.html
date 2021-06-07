@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link  rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/signInForms/signInPatient.css') }}"  >
+</head>
+<body>
+
+    <div class="nav_bar">
+        <div class="logo">
+            <h3> ICU Rooms </h3>
+        </div>
+        <ul>
+            
+            <li><a href="http://127.0.0.1:5000/" > Home </a></li>
+            <li><a href="http://127.0.0.1:5000/signin" > Sign In </a> </li>
+            <li><a href="http://127.0.0.1:5000/contactUs" > Contact Us </a></li>
+            <li><a href="http://127.0.0.1:5000/admin" > Admin </a></li>
+
+        </ul>        
+
+    </div>
+
+    <!-- sign in Patient -->
+
+    <div class="patientForm">
+        <form>
+ 
+            <label>ID</label><br> 
+            <input type="number" placeholder="e.g. 30008271700123"><br> <br> 
+
+            <label>Password</label><br> 
+            <input type="password" placeholder="Password"> <br> <br>            
+            
+            <input type="submit">
+
+        </form>
+    </div>
+
+    
+</body>
+</html>
