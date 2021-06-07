@@ -188,28 +188,72 @@ def roomForm():
 
 @app.route("/admin/privilages/bedview")
 def bedView():
-    return render_template("adminView/bedView/index.html")
+    sql = "SELECT * FROM Beds"    
+    mycursor.execute(sql)
+    row_headers = [x[0] for x in mycursor.description]
+    myresult = mycursor.fetchall()
+    return render_template("adminView/bedView/index.html", Table=myresult)
+
 
 @app.route("/admin/privilages/medicalview")
 def medicalView():
-    return render_template("adminView/medicalView/index.html")
+    sql = "SELECT * FROM MedicalEquipment"    
+    mycursor.execute(sql)
+    row_headers = [x[0] for x in mycursor.description]
+    myresult = mycursor.fetchall()
+    return render_template("adminView/medicalView/index.html", Table=myresult)
+
+# @app.route("/admin/privilages/doctorview", methods = ['GET', 'POST'])
+# def doctorView():
+#     if request.method == 'POST':
+#         mlnumber = request.form['mlnumber']
+#         sql = "SELECT * FROM Doctor WHERE MLNum = %s"
+#         val = (mlnumber,)
+#         mycursor.execute(sql,val)
+#         row_headers = [x[0] for x in mycursor.description]
+#         myresult = mycursor.fetchall()
+#         return render_template("view.html", Table=myresult)
+#     else:
+#         return render_template("adminView/doctorView/index.html")
+
 
 @app.route("/admin/privilages/doctorview")
 def doctorView():
-    return render_template("adminView/doctorView/index.html")
+    sql = "SELECT * FROM Doctor"    
+    mycursor.execute(sql)
+    row_headers = [x[0] for x in mycursor.description]
+    myresult = mycursor.fetchall()
+    return render_template("adminView/doctorView/index.html", Table=myresult)
+
+
 
 @app.route("/admin/privilages/nurseryview")
 def nurseryView():
-    return render_template("adminView/nurseryView/index.html")
+    sql = "SELECT * FROM NurseryStuff"    
+    mycursor.execute(sql)
+    row_headers = [x[0] for x in mycursor.description]
+    myresult = mycursor.fetchall()
+    return render_template("adminView/nurseryView/index.html", Table=myresult)
+
+
+    
 
 @app.route("/admin/privilages/patientview")
 def patientView():
-    return render_template("adminView/patientView/index.html")
+    sql = "SELECT * FROM Patient"    
+    mycursor.execute(sql)
+    row_headers = [x[0] for x in mycursor.description]
+    myresult = mycursor.fetchall()
+    return render_template("adminView/patientView/index.html", Table=myresult)
+
 
 @app.route("/admin/privilages/roomview")
 def roomView():
-    return render_template("adminView/roomsView/index.html")
-
+    sql = "SELECT * FROM Rooms"    
+    mycursor.execute(sql)
+    row_headers = [x[0] for x in mycursor.description]
+    myresult = mycursor.fetchall()
+    return render_template("adminView/roomsView/index.html", Table=myresult)
 
 
 
