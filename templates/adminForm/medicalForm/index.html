@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link  rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/adminForm/medicalForm/style.css') }}"  >
+</head>
+<body>
+
+    <div class="nav_bar">
+        <div class="logo">
+            <h3> ICU Rooms </h3>
+        </div>
+        <ul>
+            
+            <li><a href="#" > Home </a></li>
+            <li><a href="#" > Sign In </a> </li>
+            <li><a href="#" > Contact Us </a></li>
+            <li><a href="#" > Admin </a></li>
+
+        </ul>        
+
+    </div>
+
+    <!-- sign in admin -->
+
+    <div class="medicalEqForm">
+        <form action="http://127.0.0.1:5000/admin/privilages/medicalform" method="POST">
+ 
+            <label for="devicename">Device Name: </label><br> 
+            <input type="text" id="devicename" name="devicename" ><br> <br> 
+
+            <label for="serialnumber">Serial Number: </label><br> 
+            <input type="number" placeholder="e.g 4538012332" id="serialnumber" name="serialnumber" > <br> <br>            
+            
+            <label for="prodDate">Production Date: </label><br> 
+            <input type="date" id="prodDate" name="prodDate"> <br> <br>  
+            
+            <label for="manufacturer">Manufacturer: </label><br> 
+            <input type="text" id="manufacturer" name="manufacturer" ><br> <br> 
+
+            
+            <input type="submit">
+
+        </form>
+    </div>
+
+    
+</body>
+</html>
