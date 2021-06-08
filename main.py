@@ -240,19 +240,6 @@ def medicalView():
     myresult = mycursor.fetchall()
     return render_template("adminView/medicalView/index.html", Table=myresult)
 
-# @app.route("/admin/privilages/doctorview", methods = ['GET', 'POST'])
-# def doctorView():
-#     if request.method == 'POST':
-#         mlnumber = request.form['mlnumber']
-#         sql = "SELECT * FROM Doctor WHERE MLNum = %s"
-#         val = (mlnumber,)
-#         mycursor.execute(sql,val)
-#         row_headers = [x[0] for x in mycursor.description]
-#         myresult = mycursor.fetchall()
-#         return render_template("view.html", Table=myresult)
-#     else:
-#         return render_template("adminView/doctorView/index.html")
-
 
 @app.route("/admin/privilages/doctorview")
 def doctorView():
@@ -261,7 +248,6 @@ def doctorView():
     row_headers = [x[0] for x in mycursor.description]
     myresult = mycursor.fetchall()
     return render_template("adminView/doctorView/index.html", Table=myresult)
-
 
 
 @app.route("/admin/privilages/nurseryview")
