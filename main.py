@@ -27,19 +27,56 @@ def signIn():
     return render_template("signIn.html")
 
 
-@app.route("/signin/doctor")
+@app.route("/signin/doctor", methods=['GET', 'POST'])
 def signInDoc():
-    return render_template("SignInForms/signInDoc.html")
+
+    if request.method == 'POST':
+        mlnumber = request.form['mlnumber']
+        password = request.form['password']
+        sql = "SELECT * FROM Doctor WHERE MLNum = %s AND password = %s"
+        val = (mlnumber, password, )
+        mycursor.execute(sql,val)
+        row_headers = [x[0] for x in mycursor.description]
+        myresult = mycursor.fetchall()
+        return render_template("SignInForms/Doctor/view.html", Table=myresult)
+    else:
+        return render_template("SignInForms/Doctor/signInDoc.html")
 
 
-@app.route("/signin/nursery")
+
+@app.route("/signin/nursery", methods=['GET', 'POST'])
 def signInNursery():
-    return render_template("SignInForms/signInNursery.html")
+    if request.method == 'POST':
+        mlnumber = request.form['mlnumber']
+        password = request.form['password']
+        sql = "SELECT * FROM NurseryStuff WHERE MLNum = %s AND password = %s"
+        val = (mlnumber, password, )
+        mycursor.execute(sql,val)
+        row_headers = [x[0] for x in mycursor.description]
+        myresult = mycursor.fetchall()
+        return render_template("SignInForms/Nursery/view.html", Table=myresult)
+    else:
+        return render_template("SignInForms/Nursery/signInNursery.html")
 
 
-@app.route("/signin/patient")
+
+
+@app.route("/signin/patient", methods=['GET', 'POST'])
 def signInPatient():
-    return render_template("SignInForms/signInPatient.html")
+
+    if request.method == 'POST':
+        id = request.form['id']
+        password = request.form['password']
+        sql = "SELECT * FROM Patient WHERE id = %s AND password = %s"
+        val = (id, password, )
+        mycursor.execute(sql,val)
+        row_headers = [x[0] for x in mycursor.description]
+        myresult = mycursor.fetchall()
+        return render_template("SignInForms/Patient/view.html", Table=myresult)
+    else:
+        return render_template("SignInForms/Patient/signInPatient.html")
+
+
 
 
 # Contact Us Form
