@@ -13,7 +13,7 @@ Rooms Form Page
     <!-- room -->
 
     <div class="roomForm">
-        <form action="http://127.0.0.1:5000/admin/privilages/roomform" method="POST">
+        <form action="{{ url_for('roomForm')}}" method="POST">
 
             <label for="roomnum"> Room Number: </label><br> 
             <input type="number" id="roomnum" name="roomnum"><br> <br> 
