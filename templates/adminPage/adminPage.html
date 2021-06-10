@@ -16,27 +16,27 @@ Sign In Page
 
         <div class="leftPage">
             <h2> Sign Up </h2>
-            <a href="http://127.0.0.1:5000/admin/privilages/doctorform" > Doctor </a>
-            <a href="http://127.0.0.1:5000/admin/privilages/nurseryform" > Nursery Staff </a>
-            <a href="http://127.0.0.1:5000/admin/privilages/patientform" > Patient </a>
+            <a href="{{ url_for('doctorForm')}}" > Doctor </a>
+            <a href="{{ url_for('nurseryForm')}}" > Nursery Staff </a>
+            <a href="{{ url_for('patientForm')}}" > Patient </a>
         </div>
 
         <div class="rightPage">
             <h2> ICU Rooms </h2>
-            <a href="http://127.0.0.1:5000/admin/privilages/roomform" > Rooms </a>
-            <a href="http://127.0.0.1:5000/admin/privilages/bedform" > Beds </a>
-            <a href="http://127.0.0.1:5000/admin/privilages/medicalform" > Medical Equipment </a>
+            <a href="{{ url_for('roomForm')}}" > Rooms </a>
+            <a href="{{ url_for('bedForm')}}" > Beds </a>
+            <a href="{{ url_for('medicalForm')}}" > Medical Equipment </a>
         </div>
 
         <div class="view">
             <h2> View Information:</h2>
-            <a href="http://127.0.0.1:5000/admin/privilages/doctorview" > Doctor </a>
-            <a href="http://127.0.0.1:5000/admin/privilages/patientview" > Patient </a>
-            <a href="http://127.0.0.1:5000/admin/privilages/nurseryview" > Nursery Staff </a>
-            <a href="http://127.0.0.1:5000/admin/privilages/medicalview" > Medical Equipment  </a>
-            <a href="http://127.0.0.1:5000/admin/privilages/roomview" >  Rooms </a>
-            <a href="http://127.0.0.1:5000/admin/privilages/bedview" > Bed </a>
-            <a href="http://127.0.0.1:5000/signin/nursery/show" > Show Patient Parameters </a>
+            <a href="{{ url_for('doctorView')}}" > Doctor </a>
+            <a href="{{ url_for('patientView')}}" > Patient </a>
+            <a href="{{ url_for('nurseryView')}}" > Nursery Staff </a>
+            <a href="{{ url_for('medicalView')}}" > Medical Equipment  </a>
+            <a href="{{ url_for('roomView')}}" >  Rooms </a>
+            <a href="{{ url_for('bedView')}}" > Bed </a>
+            <a href="{{ url_for('showsign')}}" > Show Patient Parameters </a>
             
             
         </div>
