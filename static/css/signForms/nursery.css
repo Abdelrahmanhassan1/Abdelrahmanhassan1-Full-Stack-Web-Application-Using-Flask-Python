@@ -1,0 +1,89 @@
+body 
+{
+    background-image: linear-gradient(to right, rgba(116, 185, 255,1.0) ,rgba(9, 132, 227,1.0));
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav_bar
+{
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 3px;
+    padding: 1rem;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;  
+    align-items: center; 
+}
+h3
+{
+    font-size: 25px;
+    color: rgba(0, 0, 0,0.7); 
+}
+
+a
+{
+    text-decoration: none;
+    color: rgba(0, 0, 0,0.7); 
+}
+
+
+ul
+{
+    width: max-content;
+    list-style-type: none;
+    font-size: 20px;
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* sign in form */
+
+.nurseryForm
+{
+    padding: 1rem;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.7) ,rgba(255, 255, 255, 0.9));
+    position: absolute;
+    top: 50%;
+    left: 50%;  
+    transform: translate(-50%, -50%);  
+    border-radius: 10px;
+    border: none;
+}
+
+.nurseryForm label
+{
+    font-size: 25px;
+}
+
+.nurseryForm input[type = number], input[type = password]
+{
+    height: 2rem;
+    width: 500px;
+    border-radius: 10px;
+    border: none;
+    font-size: 15px;
+
+}
+
+.nurseryForm input[type = submit]
+{
+    height: 3rem;
+    width: 100px;
+    border-radius: 10px;
+    
+}
+
+
+
+
+
+
+
