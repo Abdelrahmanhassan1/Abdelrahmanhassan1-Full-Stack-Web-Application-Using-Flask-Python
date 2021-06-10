@@ -14,7 +14,7 @@ Doctor Form Page
 
     <div class="doctorForm">
 
-        <form action="http://127.0.0.1:5000/admin/privilages/doctorform" method="POST">
+        <form action="{{ url_for('doctorForm')}}" method="POST">
 
             <label for="name"> Name: </label><br>
             <input type="text" placeholder="Name..." id="name" name="name"><br><br>
