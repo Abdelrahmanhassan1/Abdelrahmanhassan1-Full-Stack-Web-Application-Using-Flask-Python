@@ -13,8 +13,8 @@ Sign In Page
     <!--show -->
 
     <div class="showform">
-
-        <form action="http://127.0.0.1:5000/signin/nursery/show" method="POST">
+        
+        <form action="{{ url_for('showsign')}}" method="POST">
  
             <label for="patientID" >Patient ID</label><br> 
             <input type="number" placeholder="patient ID .... " id="patientID" name="patientID"><br> <br> 
