@@ -6,7 +6,7 @@ mydb = mysql.connector.connect(
     host="localhost",
     user = "root",
     passwd = "mysql",
-    database = "icuRooms"
+    database = "ICURooms Database"
 )
 
 mycursor = mydb.cursor()
@@ -139,9 +139,10 @@ def medicalForm():
         serialnumber = request.form['serialnumber']
         prodDate = request.form['prodDate']
         manufacturer = request.form['manufacturer']
+        roomNum = request.form['roomNum']
         
-        sql = 'INSERT INTO MedicalEquipment(serialNum, name, manufacturer, prodDate) VALUES(%s, %s, %s, %s)'
-        val = (serialnumber, devicename, manufacturer, prodDate)
+        sql = 'INSERT INTO MedicalEquipment(serialNum, name, manufacturer, prodDate, roomNum) VALUES(%s, %s, %s, %s, %s)'
+        val = (serialnumber, devicename, manufacturer, prodDate, roomNum)
         mycursor.execute(sql, val)
         mydb.commit()
 
@@ -196,10 +197,13 @@ def patientForm():
         age = request.form['age']
         id = request.form['id']
         entrydate = request.form['entrydate']
-        address = request.form['address']
+        roomNum = request.form['roomNum']
+        bedNum = request.form['bedNum']
+        docml = request.form['docml']
+
         password = request.form['password']
-        sql = 'INSERT INTO Patient(id, name, age, entryDate, address, password) VALUES(%s, %s, %s, %s, %s, %s)'
-        val = (id, name, age, entrydate, address, password)
+        sql = 'INSERT INTO Patient(id, name, age, entryDate,  password, roomNum, bedNum, docMLNum) VALUES(%s, %s, %s, %s, %s, %s, %s, %s)'
+        val = (id, name, age, entrydate,  password, roomNum, bedNum, docml)
         mycursor.execute(sql, val)
         mydb.commit()
         return render_template("adminForm/patientForm/index.html")
