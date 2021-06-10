@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link  rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/addparameters.css') }}"  >
+</head>
+<body>
+
+    <div class="nav_bar">
+        <div class="logo">
+            <h3> ICU Rooms </h3>
+        </div>
+        <ul>
+            
+            <li><a href="#" > Home </a></li>
+            <li><a href="#" > Sign In </a> </li>
+            <li><a href="#" > Contact Us </a></li>
+            <li><a href="#" > Admin </a></li>
+
+        </ul>        
+
+    </div>
+
+    <!-- Doctor Form -->
+
+    <div class="addparameters">
+
+        <form action="http://127.0.0.1:5000/signin/nursery/addparameters" method="POST">
+
+            <label for="patientID"> Patient ID: </label><br>
+            <input type="text" placeholder="ID..." id="patientID" name="patientID"><br><br>
+
+            <label for="sampleTime"> Sample Time: </label><br>
+            <input type="time" id="sampleTime" name="sampleTime"><br><br>
+            
+            <label for="sampleDate"> Sample Date: </label><br>
+            <input type="date"  id="sampleDate" name="sampleDate" ><br><br>
+            
+            <label for="temp"> Temperature : </label><br>
+            <input type="text" placeholder="e.g 37" id="temp" name="temp" ><br><br>
+
+            <label for="pressure"> Pressure: </label><br>
+            <input type="text" placeholder="e.g 120/80" id="pressure" name="pressure"><br><br>
+
+            <label for="bloodO2"> Blood O2 Percentage: </label><br>
+            <input type="number" placeholder="e.g 95" id="bloodO2" name="bloodO2"><br><br>
+            
+            <label for="urineRBC"> Urine RBC: </label><br>
+            <input type="number" placeholder="e.g 0 ~ 5" id="urineRBC" name="urineRBC"><br><br>
+            
+
+            <input type="submit"><br>
+
+
+        </form>
+    </div>
+    
+</body>
+</html>
