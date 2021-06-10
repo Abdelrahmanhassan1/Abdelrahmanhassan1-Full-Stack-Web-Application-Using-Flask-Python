@@ -1,36 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-    <link  rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/adminView/medicalView/style.css') }}"  >
+{% extends "base.html" %}
 
-</head>
-<body>
-    
-    <!-- Nav Bar -->
-    <div class="nav_bar">
-        <div class="logo">
-            <h3> ICU Rooms </h3>
-        </div>
-        <ul>
-            
-            <li><a href="http://127.0.0.1:5000/" > Home </a></li>
-            <li><a href="http://127.0.0.1:5000/signin" > Sign In </a> </li>
-            <li><a href="http://127.0.0.1:5000/contactUs" > Contact Us </a></li>
-            <li><a href="http://127.0.0.1:5000/admin" > Admin </a></li>
+{% block title %}
+Medical Equipment View Page
+{% endblock %}
 
-        </ul>
+{% block style %}
+<link  rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/adminView/medicalView/style.css') }}"  >
+{% endblock %}
 
-    </div>
-
+{% block content %}
 
     <!-- Content -->
     <div class="content">
 
-        <h1> Rooms Informations: </h1>
+        <h1> Medical Equipment Informations: </h1>
 
         <table style="width:100%" class="table">
             <thead>
@@ -64,5 +47,4 @@
             </table>
     
         
-</body>
-</html>
+{% endblock %}
