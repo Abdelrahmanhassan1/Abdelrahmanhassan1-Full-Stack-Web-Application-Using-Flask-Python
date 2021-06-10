@@ -1,28 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-    <link  rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/adminForm/patientForm/style.css') }}"  >
-</head>
-<body>
+{% extends "base.html" %}
 
-    <div class="nav_bar">
-        <div class="logo">
-            <h3> ICU Rooms </h3>
-        </div>
-        <ul>
-            
-            <li><a href="#" > Home </a></li>
-            <li><a href="#" > Sign In </a> </li>
-            <li><a href="#" > Contact Us </a></li>
-            <li><a href="#" > Admin </a></li>
+{% block title %}
+Patient Form Page
+{% endblock %}
 
-        </ul>        
+{% block style %}
+<link  rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/adminForm/patientForm/style.css') }}"  >
+{% endblock %}
 
-    </div>
+{% block content %}
 
     <!-- sign in patientForm -->
 
@@ -59,6 +45,4 @@
         </form>
     </div>
 
-    
-</body>
-</html>
+{% endblock %}
