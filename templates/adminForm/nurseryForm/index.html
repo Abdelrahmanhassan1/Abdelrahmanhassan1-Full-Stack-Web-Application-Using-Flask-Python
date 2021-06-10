@@ -14,7 +14,7 @@ Nursery Stuff Form Page
     <!-- Nursery Form -->
 
     <div class="nurseryForm">
-        <form action="http://127.0.0.1:5000/admin/privilages/nurseryform" method="POST">
+        <form action="{{ url_for('nurseryForm')}}" method="POST">
 
             <label for="name"> Name: </label><br>
             <input type="text" placeholder="Name..." id="name" name="name"><br><br>
