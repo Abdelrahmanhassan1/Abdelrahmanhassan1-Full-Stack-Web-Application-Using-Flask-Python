@@ -178,10 +178,11 @@ def nurseryForm():
         age = request.form['age']
         mlnumber = request.form['mlnumber']
         id = request.form['id']
+        roomNum = request.form['roomNum']
         email = request.form['email']
         password = request.form['password']
-        sql = 'INSERT INTO NurseryStuff(MLNum, id, name, age, email, password) VALUES(%s, %s, %s, %s, %s, %s)'
-        val = (mlnumber, id, name, age, email, password)
+        sql = 'INSERT INTO NurseryStuff(MLNum, id, name, age, email, password, roomNum) VALUES(%s, %s, %s, %s, %s, %s, %s)'
+        val = (mlnumber, id, name, age, email, password, roomNum)
         mycursor.execute(sql, val)
         mydb.commit()
         return render_template("adminForm/nurseryForm/index.html")
