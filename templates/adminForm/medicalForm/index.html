@@ -14,7 +14,7 @@ Medical Equipment Form Page
     <!-- sign in admin -->
 
     <div class="medicalEqForm">
-        <form action="http://127.0.0.1:5000/admin/privilages/medicalform" method="POST">
+        <form action="{{ url_for('medicalForm')}}" method="POST">
  
             <label for="devicename">Device Name: </label><br> 
             <input type="text" id="devicename" name="devicename" ><br> <br> 
