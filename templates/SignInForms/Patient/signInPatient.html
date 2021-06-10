@@ -15,7 +15,7 @@ Sign In Patient
 
     <div class="patientForm">
 
-        <form action="http://127.0.0.1:5000/signin/patient" method="POST">
+        <form action="{{ url_for('signInPatient')}}" method="POST">
  
             <label for="id">ID</label><br> 
             <input type="number" placeholder="e.g. 30008271700123" id="id" name="id"><br> <br> 
