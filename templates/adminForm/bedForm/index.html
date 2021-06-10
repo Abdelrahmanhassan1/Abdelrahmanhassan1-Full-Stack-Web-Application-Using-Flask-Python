@@ -13,7 +13,7 @@ Bed Form Page
     <!-- Bed -->
 
     <div class="bedForm">
-        <form action="http://127.0.0.1:5000/admin/privilages/bedform" method="POST">
+        <form action="{{ url_for('bedForm')}}" method="POST">
  
             <label for="roomNum"> Room Number: </label><br> 
             <input type="number" id="roomNum" name="roomNum"><br> <br> 
