@@ -15,7 +15,7 @@ Sign In Doctor
 
     <div class="doctorForm">
 
-        <form action="http://127.0.0.1:5000/signin/doctor" method="POST">
+        <form action="{{ url_for('signInDoc')}}" method="POST">
  
             <label for="mlnumber">Medical License Number</label><br> 
             <input type="number" placeholder="Medical License Number e.g. 1021521351" id="mlnumber" name="mlnumber"><br> <br> 
