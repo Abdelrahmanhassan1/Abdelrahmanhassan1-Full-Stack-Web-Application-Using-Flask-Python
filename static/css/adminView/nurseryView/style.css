@@ -76,3 +76,12 @@ ul
 {
     padding: 1rem;
 }
+
+.addingParameters a
+{
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 25px;
+}
