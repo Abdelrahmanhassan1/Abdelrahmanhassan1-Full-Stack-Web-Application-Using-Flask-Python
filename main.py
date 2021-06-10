@@ -59,6 +59,40 @@ def signInNursery():
         return render_template("SignInForms/Nursery/signInNursery.html")
 
 
+@app.route("/signin/nursery/addparameters", methods=['GET', 'POST'])
+def addParameters():
+    if request.method == 'POST':
+        patientID = request.form['patientID']
+        sampleTime = request.form['sampleTime']
+        sampleDate = request.form['sampleDate']
+        temp = request.form['temp']
+        pressure = request.form['pressure']
+        bloodO2 = request.form['bloodO2']
+        urineRBC = request.form['urineRBC']
+
+        sql = 'INSERT INTO PatientParameters(patientID, sampleTime, sampleDate, temp, pressure, bloodO2, urineRBC) VALUES(%s, %s, %s, %s, %s, %s, %s)'
+        val = (patientID, sampleTime, sampleDate, temp, pressure, bloodO2, urineRBC)
+        mycursor.execute(sql,val)
+        mydb.commit()
+        return render_template("SignInForms/Nursery/addparameters.html")
+    else:
+        
+        return render_template("SignInForms/Nursery/addparameters.html")
+
+
+@app.route("/signin/nursery/show", methods=['GET', 'POST'])
+def showsign():
+
+    if request.method == 'POST':
+        patientID = request.form['patientID']
+        sql = "SELECT * FROM PatientParameters WHERE patientID = %s"
+        val = (patientID, )
+        mycursor.execute(sql,val)
+        row_headers = [x[0] for x in mycursor.description]
+        myresult = mycursor.fetchall()
+        return render_template("SignInForms/Nursery/showtable.html", Table=myresult)
+    else:
+        return render_template("SignInForms/Nursery/showparameters.html")
 
 
 @app.route("/signin/patient", methods=['GET', 'POST'])
