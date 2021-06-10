@@ -14,7 +14,7 @@ Sign In Nursery Staff
 
     <div class="nurseryForm">
 
-        <form action="http://127.0.0.1:5000/signin/nursery" method="POST">
+        <form action="{{ url_for('signInNursery')}}" method="POST">
  
             <label for="mlnumber">Medical License Number</label><br> 
             <input type="number" placeholder="Medical License Number e.g. 1021521351" id="mlnumber" name="mlnumber"><br> <br> 
